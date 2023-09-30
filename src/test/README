@@ -1,0 +1,43 @@
+CleverPPC Web Sitesi Team 10 Test Çalışması
+
+Proje Amacı :
+https://cleverppc.com/prestashop4/ web sitesi için belirlenen 8 adet user story nin test edilmesi
+amaçlanmaktadır. Böylece sitenin kullanılabilirliğini ve stabil çalışıp çalışmadığını
+görebileceğiz
+
+Proje Hedefleri:
+  US_01_Reg Kullanıcı Kaydı Oluşturma (Register)
+  US_02_Login Kullanıcı Girişi Yapabilme (Login)
+  US03_NewAddr Kullanıcı hesabına yeni bir adres eklemek
+  US04_AddToCart Sepete Ürün Ekleme
+  US05_ProductList Listelenen Ürünlerin Sayısının Kontrolü
+  US06_AddToCartList Sepete Eklenen Ürünlerin Kontrolü
+  US07_Checkout Sipariş Verme ve Ödeme
+  US08_ContactUs Kullanıcı olarak web sitesi ekibine mail gönderme
+
+Proje Teknoloji ve Araçları :
+Programming Language : Java JDK 1.8 se
+Test Automation Tool : cucumber:7.9.0-testng:7.9.0
+Version Control : Git & GitHub
+Project Management : Jira & XRay
+
+Kurulum  :
+GitHub'da merkez proje oluşturulup master branch koruma altına alındı.
+Tüm takım üyeleri İntellij üzerinden projeyi vcs ile klonlayıp kendi branchlarını oluşturdu.
+Jirada yeni proje oluşturulup product backlog oluşturuldu.
+Tüm test caseler intellij üzerinden çalıştırılıp testler tamamlandı.
+Projenin baştan sona kadar yönetimi için Jira ve Xray kullanılmıştır.
+
+Takım Üyeleri :
+QA Lead - İhsan Ahmed Usmail - ihsanahmedusmail@gmail.com
+QA - Vildan Çayhan - cayhanvildan@gmail.com
+QA - Cansu Çeker - cansu.ceker.te@gmail.com
+QA - Faruk Çeker - farukceker.te@gmail.com
+QA - Ethem Ağca - ethemagca0126@gmail.com
+
+Sürüm :
+NC-1.01
+
+Teşekkür :
+İsmet Temur, Mustafa Yılmaz, Ebuzer T. , Hakan Taşdelen, Bilal Mavus 'a
+katkılarından dolayı teşekkür ederiz.
