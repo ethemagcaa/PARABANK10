@@ -11,14 +11,13 @@ import java.io.File;
 
 public class Hooks {
 
-    @Before // Cucumber ın Annotation ı
+    @Before
     public void before(){
 
-       // System.out.println("Senaryo başladı ?");
 
     }
 
-    @After // Cucumber ın Annotation ı
+    @After
     public void after(Scenario senaryo)
     {
         // extent reportun plugin aktif iken açık kalsın
@@ -28,9 +27,7 @@ public class Hooks {
             senaryo.attach(hafizadakiHali, "image/png", "screenshot name");
         }
 
-        //System.out.println("Senaryo bitti ?");
-        // doru çalışırsa burda quit çağıracağım
-      GWD.quitDriver(); // static metodlar sınıfın adı ile çağırılıyor
+      GWD.quitDriver();
     }
 
 }
