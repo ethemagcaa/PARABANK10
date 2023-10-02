@@ -13,14 +13,14 @@ public class LoginStep {
 
     @Given("Navigate to ParaBank")
     public void navigateToParaBank() {
-        GWD.getDriver().get("https://para.testar.org/");
+        GWD.getDriver().get("https://parabank.parasoft.com/parabank/index.htm");
 
     }
 
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
-        dc.mySendKeys(dc.emailInput,"team10@gmail.com");
-        dc.mySendKeys(dc.passwordInput,"123456");
+        dc.mySendKeys(dc.userName,"test10");
+        dc.mySendKeys(dc.passwordInput,"123456@");
         dc.myClick(dc.loginButton);
 
     }

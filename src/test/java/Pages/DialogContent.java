@@ -10,7 +10,7 @@ public class DialogContent extends Parent10 {
     public DialogContent() {PageFactory.initElements(GWD.getDriver(), this);}
 
     @FindBy(css = "[name='username']")
-    public WebElement emailInput;
+    public WebElement userName;
 
     @FindBy(css = "[name='password']")
     public WebElement passwordInput;
