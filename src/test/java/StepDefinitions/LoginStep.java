@@ -3,6 +3,7 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Pages.DialogContentV;
 import Utilities.GWD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,7 +11,6 @@ import io.cucumber.java.en.When;
 public class LoginStep {
 
     DialogContentV dc=new DialogContentV();
-
 
     @Given("Navigate to ParaBank")
     public void navigateToParaBank() {
@@ -25,7 +25,6 @@ public class LoginStep {
         dc.myClick(dc.loginButton);
 
     }
-
 
 
     @Then("welcome message should be  displayed")
