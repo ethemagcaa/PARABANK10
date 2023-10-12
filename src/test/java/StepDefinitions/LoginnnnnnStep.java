@@ -2,29 +2,29 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Utilities.GWD;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-
-public class LoginStep {
+public class LoginnnnnnStep {
 
     DialogContent dc=new DialogContent();
 
+
     @Given("Navigate to ParaBank")
     public void navigateToParaBank() {
-        GWD.getDriver().get("https://parabank.parasoft.com/parabank/index.htm");
+        GWD.getDriver().get("https://parabank.parasoft.com/");
 
     }
 
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
-        dc.mySendKeys(dc.userName,"tester5");
-        dc.mySendKeys(dc.passwordInput,"9182734");
+        dc.mySendKeys(dc.emailInput,"team10@gmail.com");
+        dc.mySendKeys(dc.passwordInput,"123456");
         dc.myClick(dc.loginButton);
 
     }
+
 
 
     @Then("welcome message should be  displayed")
@@ -35,4 +35,3 @@ public class LoginStep {
 
 
 }
-
