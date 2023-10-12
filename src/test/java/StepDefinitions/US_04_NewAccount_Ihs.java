@@ -1,21 +1,21 @@
 package StepDefinitions;
 
-import Pages.US_04_NewAccountPom;
-import Utilities.GWD;
+import Pages.DialogContent;
+import Pages.LeftNav;
 import io.cucumber.java.en.*;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 
 public class US_04_NewAccount_Ihs {
 
-    US_04_NewAccountPom na = new US_04_NewAccountPom();
+      DialogContent dc=new DialogContent();
+
+      LeftNav lf=new LeftNav();
 
     @When("the user clicks on the Open New Account link")
     public void theUserClicksOnTheLink() {
 
-       na.myClick(na.openNewAccount);
+       lf.myClick(lf.openNewAccount);
 
     }
 
@@ -23,23 +23,23 @@ public class US_04_NewAccount_Ihs {
     public void theUserSelectsAsTheTypeOfAccountToBeOpenedFromTheDropDownMenu() {
 
 
-        WebElement checkingAccountOption = na.checkingAccount.get(0);
-        na.myClick(checkingAccountOption);
+        WebElement checkingAccountOption = dc.checkingAccount.get(0);
+        dc.myClick(checkingAccountOption);
 
     }
 
     @And("the user observes a notification regarding the minimum initial deposit requirement")
     public void theUserObservesANotificationRegardingTheMinimumInitialDepositRequirement() {
 
-        na.verifyContainsText(na.minimumDepositMessage,"A minimum of");
-        System.out.println(na.minimumDepositMessage.getText());
+        dc.verifyContainsText(dc.minimumDepositMessage,"A minimum of");
+        System.out.println(dc.minimumDepositMessage.getText());
     }
 
 
 
     @And("the user clicks the Open New Account button")
     public void theUserClicksTheButton() {
-        na.myClick(na.openNewAccount2);
+        dc.myClick(dc.openNewAccount2);
 
     }
 
@@ -47,15 +47,15 @@ public class US_04_NewAccount_Ihs {
     public void theUserShouldSuccessfullyCreateACheckingAccount() {
 
         // String beklenenMsj = "Account Opened!";
-        na.verifyContainsText(na.newAccountOpenedMessage, "Account Opened!");
+        dc.verifyContainsText(dc.newAccountOpenedMessage, "Account Opened!");
 
     }
 
     @And("the user should see the account number")
     public void theUserShouldSeeTheAccountNumber() {
 
-        na.myClick(na.newAccountID);
-        na.verifyContainsText(na.accountNumber, "Account Number");
+        dc.myClick(dc.newAccountID);
+        dc.verifyContainsText(dc.accountNumber, "Account Number");
 
     }
 
@@ -63,8 +63,8 @@ public class US_04_NewAccount_Ihs {
     public void theUserSelectsSavingsAsTheTypeOfAccountToBeOpenedFromTheDropDownMenu() {
 
         //na.myClick(na.accountTypeDropbox);
-        WebElement savingAccountOption = na.savingAccount.get(0);
-        na.myClick(savingAccountOption);
+        WebElement savingAccountOption = dc.savingAccount.get(0);
+        dc.myClick(savingAccountOption);
 
     }
 
@@ -73,7 +73,7 @@ public class US_04_NewAccount_Ihs {
 
         // String beklenenMsj = "Account Opened!";
        // WebElement element = na.newAccountOpenedMessage;
-       na.verifyContainsText(na.newAccountOpenedMessage, "Account Opened!");
+       dc.verifyContainsText(dc.newAccountOpenedMessage, "Account Opened!");
 
 
     }

@@ -1,16 +1,13 @@
 package StepDefinitions;
 
-import Pages.DialogContentV;
-import Pages.LeftNavV;
-import io.cucumber.datatable.DataTable;
+import Pages.DialogContent;
+import Pages.LeftNav;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class AccountsOverview {
-    DialogContentV dc=new DialogContentV();
-    LeftNavV lf=new LeftNavV();
+    DialogContent dc=new DialogContent();
+    LeftNav lf=new LeftNav();
 
 
     @And("Click on the accountsOverview button")

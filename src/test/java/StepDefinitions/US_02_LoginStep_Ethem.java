@@ -1,14 +1,12 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Pages.US_02_DialogContent_Ethem;
 import Utilities.GWD;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class US_02_LoginStep_Ethem {
-    US_02_DialogContent_Ethem dc=new US_02_DialogContent_Ethem();
+   DialogContent dc=new DialogContent();
 
     @Given("Navigate to ParaBank")
     public void navigateToParaBank() {
@@ -25,8 +23,8 @@ public class US_02_LoginStep_Ethem {
 
     @When("Enter username and password and click login button")
     public void enterUsernameAndPasswordAndClickLoginButton() {
-        dc.mySendKeys(dc.userName,"test10");
-        dc.mySendKeys(dc.passwordInput,"123456@");
+        dc.mySendKeys(dc.userName,"tester7");
+        dc.mySendKeys(dc.passwordInput,"12345");
         dc.myClick(dc.loginButton);
     }
 
@@ -47,5 +45,6 @@ public class US_02_LoginStep_Ethem {
     {
         dc.verifyContainsText(dc.loginErrorMsg,"Error!");
     }
+
 
 }

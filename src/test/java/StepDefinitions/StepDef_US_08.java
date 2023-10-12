@@ -12,37 +12,36 @@ public class StepDef_US_08 {
 
     LeftNav ln = new LeftNav();
     DialogContent dc = new DialogContent();
-    DialogContentCansu dcc = new DialogContentCansu();
 
     @When("User clicks on the button of request loan")
     public void userClicksOnTheButtonOfRequestLoan() {dc.myClick(ln.requestLoan);}
 
     @Then("User fills money data")
     public void userFillsMoneyData() {
-        dc.mySendKeys(dcc.loanAmount, "2000");
-        dc.mySendKeys(dcc.downPayment, "400");}
+        dc.mySendKeys(dc.loanAmount, "2000");
+        dc.mySendKeys(dc.downPayment, "400");}
 
     @And("User selects an account number")
     public void userSelectsAnAccountNumber() {
-        Select ddMenu = new Select(dcc.fromAccountId);
+        Select ddMenu = new Select(dc.fromAccountId);
         ddMenu.selectByIndex(0);}
 
     @Then("User clicks on the button of apply now")
-    public void userClicksOnTheButtonOfApplyNow() { dc.myClick(dcc.applyNowButton);}
+    public void userClicksOnTheButtonOfApplyNow() { dc.myClick(dc.applyNowButton);}
 
     @And("Loan request processed information is verified")
-    public void loanRequestProcessedInformationIsVerified() {dc.verifyContainsText(dcc.loanStatus, "Approved");}
+    public void loanRequestProcessedInformationIsVerified() {dc.verifyContainsText(dc.loanStatus, "Approved");}
 
     @And("Approved message is displayed")
-    public void approvedMessageIsDisplayed() {dc.verifyContainsText(dcc.approvedMessage, "approved");}
+    public void approvedMessageIsDisplayed() {dc.verifyContainsText(dc.approvedMessage, "approved");}
 
     @And("User clicks on new account number")
-    public void userClicksOnNewAccountNumber() { dc.myClick(dcc.newAccountId);}
+    public void userClicksOnNewAccountNumber() { dc.myClick(dc.newAccountId);}
 
     @Then("Account details information is verified")
     public void accountDetailsInformationIsVerified() {
-        dc.verifyContainsText(dcc.accountType, "LOAN");
-        dc.verifyContainsText(dcc.balance, "2000");
-        dc.verifyContainsText(dcc.availableBalance, "2000");
-        dc.verifyContainsText(dcc.transactionMessage, "No");}
+        dc.verifyContainsText(dc.accountType, "LOAN");
+        dc.verifyContainsText(dc.balance, "2000");
+        dc.verifyContainsText(dc.availableBalance, "2000");
+        dc.verifyContainsText(dc.transactionMessage, "No");}
 }

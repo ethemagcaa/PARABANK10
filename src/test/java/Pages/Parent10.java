@@ -50,6 +50,15 @@ public class Parent10 {
 
 
     }
+
+    public void MyAssert(WebElement element,String number){
+        wait.until(ExpectedConditions.visibilityOf(element));
+        scrollToElement(element);
+        String text=element.getText();
+        boolean countainsNumber=text.contains(number);
+
+        Assert.assertTrue(countainsNumber,"Sayı yok");
+    }
 }
 
 
